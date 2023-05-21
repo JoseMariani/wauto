@@ -49,16 +49,16 @@ sudo su - deploy << EOF
 NODE_ENV=
 BACKEND_URL=${backend_url}
 FRONTEND_URL=${frontend_url}
+PORT=${backend_port}
 PROXY_PORT=443
 CHROME_BIN=/usr/bin/google-chrome-stable
-PORT=${backend_port}
 
 DB_HOST=localhost
-DB_PORT=${mysql_port}
 DB_DIALECT=mysql
 DB_USER=${instancia_add}
 DB_PASS=${mysql_root_password}
 DB_NAME=${instancia_add}
+DB_PORT=${mysql_port}
 
 JWT_SECRET=${jwt_secret}
 JWT_REFRESH_SECRET=${jwt_refresh_secret}

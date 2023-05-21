@@ -9,7 +9,7 @@
 #######################################
 frontend_node_dependencies() {
   print_banner
-  printf "${WHITE} 💻 Instalando dependências do frontend...${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Instalando dependencias de frontend...${GRAY_LIGHT}"
   printf "\n\n"
 
   sleep 2
@@ -29,7 +29,7 @@ EOF
 #######################################
 frontend_node_build() {
   print_banner
-  printf "${WHITE} 💻 Compilando o código do frontend...${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Compilando código de frontend...${GRAY_LIGHT}"
   printf "\n\n"
 
   sleep 2
@@ -80,7 +80,7 @@ EOF
 #######################################
 frontend_set_env() {
   print_banner
-  printf "${WHITE} 💻 Configurando variáveis de ambiente (frontend)...${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Variables de Ambiente .env (frontend)...${GRAY_LIGHT}"
   printf "\n\n"
 
   sleep 2
@@ -94,7 +94,7 @@ sudo su - deploy << EOF
   cat <<[-]EOF > /home/deploy/${instancia_add}/frontend/.env
 REACT_APP_BACKEND_URL=${backend_url}
 REACT_APP_HOURS_CLOSE_TICKETS_AUTO =
-SERVER_PORT = ${frontend_port}
+PORT = ${frontend_port}
 [-]EOF
 EOF
 
@@ -111,7 +111,7 @@ app.use(express.static(path.join(__dirname, "build")));
 app.get("/*", function (req, res) {
 	res.sendFile(path.join(__dirname, "build", "index.html"));
 });
-app.listen(process.env.SERVER_PORT || 3333);
+app.listen(process.env.PORT || 3333);
 
 [-]EOF
 EOF

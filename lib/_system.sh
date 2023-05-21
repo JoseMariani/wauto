@@ -9,7 +9,7 @@
 #######################################
 system_create_user() {
   print_banner
-  printf "${WHITE} 💻 Agora, vamos criar o usuário para a instancia...${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Creamos un usuario para esta instancia...${GRAY_LIGHT}"
   printf "\n\n"
 
   sleep 2
@@ -29,14 +29,14 @@ EOF
 #######################################
 system_git_clone() {
   print_banner
-  printf "${WHITE} 💻 Fazendo download do código ...${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Creando carpeta de instancia y descargando el codigo en ella...${GRAY_LIGHT}"
   printf "\n\n"
 
 
   sleep 2
 
   sudo su - deploy <<EOF
-  git clone https://github.com/FilipeCamillo/Press-Ticket  /home/deploy/${instancia_add}/
+  git clone https://github.com/JoseMariani/WhatsSolution  /home/deploy/${instancia_add}/
 EOF
 
   sleep 2
@@ -49,7 +49,7 @@ EOF
 #######################################
 system_update() {
   print_banner
-  printf "${WHITE} 💻 Vamos atualizar o sistema ...${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Actualizando el sistema Ubuntu ...${GRAY_LIGHT}"
   printf "\n\n"
 
   sleep 2
@@ -68,7 +68,7 @@ EOF
 #######################################
 system_node_install() {
   print_banner
-  printf "${WHITE} 💻 Instalando nodejs...${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Instalando nodejs de forma general...${GRAY_LIGHT}"
   printf "\n\n"
 
   sleep 2
@@ -92,7 +92,7 @@ EOF
 #######################################
 system_docker_install() {
   print_banner
-  printf "${WHITE} 💻 Instalando docker...${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Instalando docker y paquetes para SSL...${GRAY_LIGHT}"
   printf "\n\n"
 
   sleep 2
@@ -125,7 +125,7 @@ EOF
 #######################################
 system_puppeteer_dependencies() {
   print_banner
-  printf "${WHITE} 💻 Instalando puppeteer dependencies...${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Instalando dependencias puppeteer necesarias...${GRAY_LIGHT}"
   printf "\n\n"
 
   sleep 2
@@ -205,7 +205,7 @@ EOF
 #######################################
 system_snapd_install() {
   print_banner
-  printf "${WHITE} 💻 Instalando snapd...${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Instalando snapd(para codigo chrome necesario)...${GRAY_LIGHT}"
   printf "\n\n"
 
   sleep 2
@@ -271,7 +271,7 @@ EOF
 #######################################
 system_nginx_restart() {
   print_banner
-  printf "${WHITE} 💻 reiniciando nginx...${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Reiniciando nginx...${GRAY_LIGHT}"
   printf "\n\n"
 
   sleep 2
@@ -290,7 +290,7 @@ EOF
 #######################################
 system_nginx_conf() {
   print_banner
-  printf "${WHITE} 💻 configurando nginx...${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Configurando nginx...${GRAY_LIGHT}"
   printf "\n\n"
 
   sleep 2
