@@ -1,8 +1,6 @@
-## Versão Ubuntu 
-### Passo a passo
-Ao executar o comando abaixo, vai aparecer um menu para instalar ou atualizar.
-Siga los pasos para instalar o actualizar
-para instalar se van a necesitar los siguientes datos.
+## Version para Ubuntu 
+### Paso a paso
+Para instalar se van a necesitar los siguientes datos:
 1. Contraseña Mysql
 2. Nombre de la instancia, necesario para DBs y Carpetas.
 3. Número máximo de numero sde Whatsapp por cuenta.
@@ -15,11 +13,6 @@ para instalar se van a necesitar los siguientes datos.
 El acceso a phpmyadmin es por IP del servidor, ex. http://111.111.111.111:8000
 10. Puerto de MYSQL, para la primera es 3306, y las otras 3307, 3308...
 
-
-Al terminar la instalacion puede acceder al admin panel con los datos siguientes: 
-user:admin@tudominio.com
-pass:admin
-
 ## INSTALACION
 USAR solamente para la primera instalcion:
 
@@ -27,7 +20,7 @@ USAR solamente para la primera instalcion:
 sudo apt install -y git && git clone https://github.com/JoseMariani/wauto.git instalador && sudo chmod -R 777 ./instalador && cd ./instalador && sudo ./install_primaria
 ```
 
-USAR ESTE COMANDO PARA INSTALAR INSTANCIAS ADICIONALES:
+USAR PARA INSTALAR INSTANCIAS ADICIONALES:
 ```bash
 cd && cd ./instalador && sudo ./install_instancia
 ```
@@ -37,6 +30,11 @@ cd && cd ./instalador && sudo ./install_instancia
 - Instala en Docker Phpmyadmin (isolados)
 - Configura los dominios con certificados de seguridad
 - Atualiza las instanacias a la ultima version.
+## Accesos para despues de la instalacion:
+
+Al terminar la instalacion puede acceder al admin panel con los datos siguientes: 
+user:admin@tudominio.com
+pass:admin
 
 ## Version para Debian
 - [Press-Ticket-Installer](https://github.com/robsonwr/Press-Ticket-Installer)
