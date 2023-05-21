@@ -35,7 +35,7 @@ get_max_user() {
 get_frontend_url() {
   
   print_banner
-  printf "${WHITE} 💻 Digite o domínio do FRONTEND/PAINEL para a ${instancia_add}:${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Escriba el dominio para el FRONTEND de ${instancia_add}:${GRAY_LIGHT}"
   printf "\n\n"
   read -p "> " frontend_url
 }
@@ -43,7 +43,7 @@ get_frontend_url() {
 get_backend_url() {
   
   print_banner
-  printf "${WHITE} 💻 Digite o domínio do BACKEND/API para a ${instancia_add}:${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Escriba el dominio para el BACKEND/API de ${instancia_add}:${GRAY_LIGHT}"
   printf "\n\n"
   read -p "> " backend_url
 }
@@ -51,7 +51,7 @@ get_backend_url() {
 get_frontend_port() {
   
   print_banner
-  printf "${WHITE} 💻 Digite a porta do FRONTEND para a ${instancia_add}; Ex: 3000 A 3999 ${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Escribe el PUERTO FRONTEND para ${instancia_add}; Ejemplo: 3000 A 3999 ${GRAY_LIGHT}"
   printf "\n\n"
   read -p "> " frontend_port
 }
@@ -60,7 +60,7 @@ get_frontend_port() {
 get_backend_port() {
   
   print_banner
-  printf "${WHITE} 💻 Digite a porta do BACKEND para esta instancia; Ex: 4000 A 4999 ${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Escribe el PUERTO BACKEND para esta instancia; Ex: 4000 A 4999 ${GRAY_LIGHT}"
   printf "\n\n"
   read -p "> " backend_port
 }
@@ -68,7 +68,7 @@ get_backend_port() {
 get_phpmyadmin_port() {
   
   print_banner
-  printf "${WHITE} 💻 Digite a porta do PHPMYADMIN  para a ${instancia_add}; Ex: 8080 ${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Escriba el PUERTO de PHPMYADMIN  de ${instancia_add}; EJEMPLO: 8080 ${GRAY_LIGHT}"
   printf "\n\n"
   read -p "> " phpmyadmin_port
 }
@@ -76,7 +76,7 @@ get_phpmyadmin_port() {
 get_mysql_port() {
   
   print_banner
-  printf "${WHITE} 💻 Digite a porta MYSQL para ${instancia_add}; Ex: 3306 (3306, 3307...) ${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Escriba el PUERTO de MYSQL de ${instancia_add}; Ex: 3306 (3306, 3307...) ${GRAY_LIGHT}"
   printf "\n\n"
   read -p "> " mysql_port
 }
@@ -105,10 +105,10 @@ software_update() {
 inquiry_options() {
   
   print_banner
-  printf "${WHITE} 💻 Bem vindo(a) ao instalador mktsend, Selecione abaixo a proxima ação!${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Bienvenido  que quieres hacer?!${GRAY_LIGHT}"
   printf "\n\n"
-  printf "   [1] Instalar o mktsend\n"
-  printf "   [2] Atualizar o mktsend\n"
+  printf "   [1] Instalar\n"
+  printf "   [2] Actualizar\n"
   printf "\n"
   read -p "> " option
 
