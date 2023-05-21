@@ -17,27 +17,27 @@ El acceso a phpmyadmin es por IP del servidor, ex. http://111.111.111.111:8000
 
 
 Al terminar la instalacion puede acceder al admin panel con los datos siguientes: 
-[Press Ticket aqui](https://github.com/rtenorioh/Press-Ticket).
+user:admin@tudominio.com
+pass:admin
 
 ## INSTALACION
 USAR solamente para la primera instalcion:
 
 ```bash
-sudo apt install -y git && git clone https://github.com/FilipeCamillo/automatico_press.git instalador && sudo chmod -R 777 ./instalador && cd ./instalador && sudo ./install_primaria
+sudo apt install -y git && git clone https://github.com/JoseMariani/wauto.git instalador && sudo chmod -R 777 ./instalador && cd ./instalador && sudo ./install_primaria
 ```
 
-ACESSANDO DIRETORIO DO INSTALADOR & INICIANDO INSTALAÇÕES ADICIONAIS (USAR ESTE COMANDO PARA SEGUNDA OU MAIS INSTALAÇÃO:
+USAR ESTE COMANDO PARA INSTALAR INSTANCIAS ADICIONALES:
 ```bash
 cd && cd ./instalador && sudo ./install_instancia
 ```
 ## Recursos 
-- Multi instalador ilimitado [Press Ticket](https://github.com/rtenorioh/Press-Ticket)
-- Recursos isolados para cada instalação
-- Instala Docker Mariadb (isolados)
+- Multi instalador ilimitado.
+- Instala Mysql.
 - Instala Docker Phpmyadmin (isolados)
-- instala nginx
-- Configura os domínios com certificados de segurança
-- Atualiza press ticket para última versão.
+- instala Nginx.
+- Configura los dominios con certificados de seguridad
+- Atualiza las instanacias a la ultima version.
 
 ## Versão Debian
 - [Press-Ticket-Installer](https://github.com/robsonwr/Press-Ticket-Installer)
