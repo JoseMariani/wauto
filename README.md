@@ -31,16 +31,12 @@ USAR ESTE COMANDO PARA INSTALAR INSTANCIAS ADICIONALES:
 ```bash
 cd && cd ./instalador && sudo ./install_instancia
 ```
-## Recursos 
-- Multi instalador ilimitado.
-- Instala Mysql.
-- Instala Docker Phpmyadmin (isolados)
+## Recursos que se instalan ademas del sistema: 
 - instala Nginx.
+- Instala Mysql.
+- Instala en Docker Phpmyadmin (isolados)
 - Configura los dominios con certificados de seguridad
 - Atualiza las instanacias a la ultima version.
 
-## Versão Debian
+## Version para Debian
 - [Press-Ticket-Installer](https://github.com/robsonwr/Press-Ticket-Installer)
-
-## Instalação manual
-- [Press Ticket](https://github.com/rtenorioh/Press-Ticket)
