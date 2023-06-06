@@ -36,7 +36,7 @@ system_git_clone() {
   sleep 2
 
   sudo su - deploy <<EOF
-  git clone https://github.com/JoseMariani/WhatsSolution  /home/deploy/${instancia_add}/
+  git clone "https://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@github.com/JoseMariani/whatsolution-private.git"  /home/deploy/${instancia_add}/
 EOF
 
   sleep 2

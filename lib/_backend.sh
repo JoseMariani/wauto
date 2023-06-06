@@ -146,7 +146,7 @@ EOF
 #######################################
 backend_update() {
   print_banner
-  printf "${WHITE} 💻 Atualizando o backend...${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Atualizando backend...${GRAY_LIGHT}"
   printf "\n\n"
 
   sleep 2
@@ -177,7 +177,7 @@ EOF
 #######################################
 backend_db_migrate() {
   print_banner
-  printf "${WHITE} 💻 Executando db:migrate...${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Creando estructura de DB db:migrate...${GRAY_LIGHT}"
   printf "\n\n"
 
   sleep 2
@@ -197,7 +197,7 @@ EOF
 #######################################
 backend_db_seed() {
   print_banner
-  printf "${WHITE} 💻 Executando db:seed...${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Importando datos a DB db:seed...${GRAY_LIGHT}"
   printf "\n\n"
 
   sleep 2
@@ -239,7 +239,7 @@ EOF
 #######################################
 backend_nginx_setup() {
   print_banner
-  printf "${WHITE} 💻 Configurando nginx (backend)...${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Configurando Nginx (backend)...${GRAY_LIGHT}"
   printf "\n\n"
 
   sleep 2

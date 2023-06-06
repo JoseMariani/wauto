@@ -105,7 +105,7 @@ software_update() {
 inquiry_options() {
   
   print_banner
-  printf "${WHITE} 💻 Bienvenido  que quieres hacer?!${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Bienvenido que quieres hacer?!${GRAY_LIGHT}"
   printf "\n\n"
   printf "   [1] Instalar\n"
   printf "   [2] Actualizar\n"

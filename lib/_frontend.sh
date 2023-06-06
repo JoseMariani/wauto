@@ -51,7 +51,7 @@ EOF
 #######################################
 frontend_update() {
   print_banner
-  printf "${WHITE} 💻 Atualizando o frontend...${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Atualizando frontend...${GRAY_LIGHT}"
   printf "\n\n"
 
   sleep 2
