@@ -19,7 +19,7 @@ get_instancia_add() {
 get_max_whats() {
   
   print_banner
-  printf "${WHITE} 💻 Digite o numero maximo de conexões que a empresa ${instancia_add} poderá cadastrar:${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Cuantos Whastapp podran ser sincronizados en ${instancia_add}:${GRAY_LIGHT}"
   printf "\n\n"
   read -p "> " max_whats
 }
@@ -68,7 +68,7 @@ get_backend_port() {
 get_phpmyadmin_port() {
   
   print_banner
-  printf "${WHITE} 💻 Escriba el PUERTO de PHPMYADMIN  de ${instancia_add}; EJEMPLO: 8080 ${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Escriba el PUERTO de PHPMYADMIN  de ${instancia_add}; EJEMPLO: 8081 ${GRAY_LIGHT}"
   printf "\n\n"
   read -p "> " phpmyadmin_port
 }
@@ -80,8 +80,6 @@ get_mysql_port() {
   printf "\n\n"
   read -p "> " mysql_port
 }
-
-
 
 get_urls() {
   get_mysql_root_password
@@ -102,20 +100,33 @@ software_update() {
   backend_update
 }
 
+onlybackend_update() {
+  get_instancia_add
+  backend_update
+}
+onlyfrontend_update() {
+  get_instancia_add
+  frontend_update
+}
+
 inquiry_options() {
   
   print_banner
   printf "${WHITE} 💻 Bienvenido que quieres hacer?!${GRAY_LIGHT}"
   printf "\n\n"
-  printf "   [1] Instalar\n"
-  printf "   [2] Actualizar\n"
+  printf "   [1] Instalar nueva instancia\n"
+  printf "   [2] Actualizar FrondEnd\n"
+  printf "   [3] Actualizar BackEnd\n"
+  printf "   [4] Actualizar Todo\n"
   printf "\n"
   read -p "> " option
 
   case "${option}" in
     1) get_urls ;;
+    2) onlyfrontend_update ;;
+    3) onlybackend_update ;;
 
-    2) 
+    4) 
       software_update 
       exit
       ;;
