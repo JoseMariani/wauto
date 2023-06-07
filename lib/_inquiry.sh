@@ -100,33 +100,19 @@ software_update() {
   backend_update
 }
 
-onlybackend_update() {
-  get_instancia_add
-  backend_update
-}
-onlyfrontend_update() {
-  get_instancia_add
-  frontend_update
-}
-
 inquiry_options() {
   
   print_banner
   printf "${WHITE} 💻 Bienvenido que quieres hacer?!${GRAY_LIGHT}"
   printf "\n\n"
   printf "   [1] Instalar nueva instancia\n"
-  printf "   [2] Actualizar FrondEnd\n"
-  printf "   [3] Actualizar BackEnd\n"
-  printf "   [4] Actualizar Todo\n"
+  printf "   [2] Actualizar una instancia"
   printf "\n"
   read -p "> " option
 
   case "${option}" in
     1) get_urls ;;
-    2) onlyfrontend_update ;;
-    3) onlybackend_update ;;
-
-    4) 
+    2) 
       software_update 
       exit
       ;;
