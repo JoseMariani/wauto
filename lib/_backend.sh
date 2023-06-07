@@ -105,7 +105,7 @@ EOF
 #######################################
 backend_node_dependencies() {
   print_banner
-  printf "${WHITE} 💻 Instalando dependências do backend...${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Instalando dependencias del Backend...${GRAY_LIGHT}"
   printf "\n\n"
 
   sleep 2
@@ -125,7 +125,7 @@ EOF
 #######################################
 backend_node_build() {
   print_banner
-  printf "${WHITE} 💻 Compilando o código do backend...${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Compilando código del backend...${GRAY_LIGHT}"
   printf "\n\n"
 
   sleep 2
@@ -146,7 +146,7 @@ EOF
 #######################################
 backend_update() {
   print_banner
-  printf "${WHITE} 💻 Atualizando backend...${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Actualizando backend...${GRAY_LIGHT}"
   printf "\n\n"
 
   sleep 2
@@ -154,7 +154,7 @@ backend_update() {
   sudo su - deploy <<EOF
   cd /home/deploy/${instancia_add}
   pm2 stop ${instancia_add}-backend
-  git pull
+  git pull origin main
   cd /home/deploy/${instancia_add}/backend
   npm install
   npm update -f

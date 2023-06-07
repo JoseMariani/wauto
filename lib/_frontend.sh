@@ -59,7 +59,7 @@ frontend_update() {
   sudo su - deploy <<EOF
   cd /home/deploy/${instancia_add}
   pm2 stop ${instancia_add}-frontend
-  git pull
+  git pull origin main
   cd /home/deploy/${instancia_add}/frontend
   sudo cp /home/deploy/${instancia_add}/frontend/src/config.json.example /home/deploy/${instancia_add}/frontend/src/config.json
   npm install
