@@ -34,9 +34,14 @@ system_git_clone() {
 
 
   sleep 2
+  #!/bin/bash
+
+repo_url="https://github.com/JoseMariani/whatsolution-private"
+
+#git clone "$repo_url" --config "http.extraheader=AUTHORIZATION: Bearer $github_token"
 
   sudo su - deploy <<EOF
-  git clone "https://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@github.com/JoseMariani/whatsolution-private.git"  /home/deploy/${instancia_add}/
+  git clone "$repo_url"  /home/deploy/${instancia_add}/
 EOF
 
   sleep 2
