@@ -83,6 +83,7 @@ system_node_install() {
   apt-get install -y nodejs
   sleep 2
   npm install -g npm@latest
+  npm config set legacy-peer-deps true
   sleep 2
   sudo timedatectl set-timezone America/Sao_Paulo
   
