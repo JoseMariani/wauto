@@ -60,6 +60,9 @@ DB_PASS=${mysql_root_password}
 DB_NAME=${instancia_add}
 DB_PORT=${mysql_port}
 
+PM2_FRONTEND=${instancia_add}-frontend
+PM2_BACKEND=${instancia_add}-backend
+
 JWT_SECRET=${jwt_secret}
 JWT_REFRESH_SECRET=${jwt_refresh_secret}
 
