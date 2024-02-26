@@ -61,7 +61,6 @@ frontend_update() {
   pm2 stop ${instancia_add}-frontend
   git pull origin main
   cd /home/deploy/${instancia_add}/frontend
-  sudo cp /home/deploy/${instancia_add}/frontend/src/config.json.example /home/deploy/${instancia_add}/frontend/src/config.json
   npm install
   rm -rf build
   npm run build
