@@ -82,7 +82,7 @@ system_node_install() {
   npm install -g npm@latest
   npm config set legacy-peer-deps true
   sleep 2
-  sudo timedatectl set-timezone America/Sao_Paulo
+  sudo timedatectl set-timezone America/Caracas
   
 EOF
 
