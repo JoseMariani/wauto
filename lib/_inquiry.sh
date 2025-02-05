@@ -1,5 +1,13 @@
 #!/bin/bash
 
+get_deploy_password() {
+  
+  print_banner
+  printf "${WHITE} 💻 Contraseña del usuario deploy${GRAY_LIGHT}"
+  printf "\n\n"
+  read -p "> " deploy_password
+}
+
 get_link_git() {
   
   print_banner
@@ -82,7 +90,6 @@ get_mysql_port() {
 }
 
 get_urls() {
-  get_mysql_root_password
   get_instancia_add
   get_max_whats
   get_max_user

@@ -20,9 +20,7 @@ source "${PROJECT_ROOT}"/lib/manifest.sh
 # user configs file
 if [[ ! -e "${PROJECT_ROOT}"/config ]]; then
   cat << EOF > "${PROJECT_ROOT}"/config
-deploy_password=${deploy_password}
-mysql_root_password=${mysql_root_password}
-db_pass=${db_pass}
+deploy_password="",
 EOF
 fi
 
@@ -46,6 +44,7 @@ system_nginx_install
 system_certbot_install
 
 # system config
+get_deploy_password
 system_create_user
 
 # backend related

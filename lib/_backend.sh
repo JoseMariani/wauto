@@ -11,7 +11,6 @@ backend_redis_create() {
   printf "${WHITE} 💻 Creando base de datos y usuario DB...${GRAY_LIGHT}"
   printf "\n\n"
 
-  MYSQL_PASSWORD=$(openssl rand -base64 12)
 sudo mysql -u root <<EOF
 CREATE DATABASE $instancia_add CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 CREATE USER '$instancia_add'@'localhost' IDENTIFIED BY '$MYSQL_PASSWORD';
@@ -56,7 +55,7 @@ CHROME_BIN=/usr/bin/google-chrome-stable
 DB_HOST=localhost
 DB_DIALECT=mysql
 DB_USER=${instancia_add}
-DB_PASS=${mysql_root_password}
+DB_PASS=${MYSQL_PASSWORD}
 DB_NAME=${instancia_add}
 DB_PORT=${mysql_port}
 
