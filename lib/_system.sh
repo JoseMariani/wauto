@@ -15,7 +15,7 @@ system_create_user() {
   sleep 2
 
   sudo su - root <<EOF
-  useradd -m -p $(openssl passwd -crypt ${mysql_root_password}) -s /bin/bash -G sudo deploy
+  useradd -m -p $(openssl passwd -1 ${mysql_root_password}) -s /bin/bash -G sudo deploy
   usermod -aG sudo deploy
 EOF
 
@@ -41,7 +41,6 @@ system_git_clone() {
   sudo su - deploy <<EOF
    git clone ${link_git} /home/deploy/${instancia_add}/
 EOF
-
   sleep 2
 }
 
@@ -81,6 +80,7 @@ system_node_install() {
   apt-get install -y nodejs
   sleep 2
   npm install -g npm@latest
+  npm config set legacy-peer-deps true
   sleep 2
   sudo timedatectl set-timezone America/Sao_Paulo
   

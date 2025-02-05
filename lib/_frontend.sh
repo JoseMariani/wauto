@@ -36,7 +36,7 @@ frontend_node_build() {
 
   sudo su - deploy <<EOF
   cd /home/deploy/${instancia_add}/frontend
-  sudo cp /home/deploy/${instancia_add}/frontend/src/config.json.example /home/deploy/${instancia_add}/frontend/src/config.json
+  #sudo cp /home/deploy/${instancia_add}/frontend/src/config.json.example /home/deploy/${instancia_add}/frontend/src/config.json
   npm install
   npm run build
 EOF
@@ -61,7 +61,6 @@ frontend_update() {
   pm2 stop ${instancia_add}-frontend
   git pull origin main
   cd /home/deploy/${instancia_add}/frontend
-  sudo cp /home/deploy/${instancia_add}/frontend/src/config.json.example /home/deploy/${instancia_add}/frontend/src/config.json
   npm install
   rm -rf build
   npm run build
@@ -93,7 +92,7 @@ frontend_set_env() {
 sudo su - deploy << EOF
   cat <<[-]EOF > /home/deploy/${instancia_add}/frontend/.env
 REACT_APP_BACKEND_URL=${backend_url}
-REACT_APP_HOURS_CLOSE_TICKETS_AUTO =
+REACT_APP_PAGE_TITLE=WhatCenter
 PORT = ${frontend_port}
 [-]EOF
 EOF

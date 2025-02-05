@@ -8,7 +8,7 @@
 #######################################
 backend_redis_create() {
   print_banner
-  printf "${WHITE} 💻 Criando banco e phpmyadmin via Docker...${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Creando docker con phpmyadmin y DB...${GRAY_LIGHT}"
   printf "\n\n"
 
   sleep 2
@@ -29,7 +29,7 @@ sleep 2
 #######################################
 backend_set_env() {
   print_banner
-  printf "${WHITE} 💻 Configurando variáveis de ambiente (backend)...${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Configurando variables de ambiente (backend)...${GRAY_LIGHT}"
   printf "\n\n"
 
   sleep 2
@@ -59,6 +59,9 @@ DB_USER=${instancia_add}
 DB_PASS=${mysql_root_password}
 DB_NAME=${instancia_add}
 DB_PORT=${mysql_port}
+
+PM2_FRONTEND=${instancia_add}-frontend
+PM2_BACKEND=${instancia_add}-backend
 
 JWT_SECRET=${jwt_secret}
 JWT_REFRESH_SECRET=${jwt_refresh_secret}
@@ -134,6 +137,11 @@ backend_node_build() {
   cd /home/deploy/${instancia_add}/backend
   npm install
   npm run build
+  sudo cp /home/deploy/${instancia_add}/backend/clean.sh /home/deploy/${instancia_add}/backend/dist/clean.sh
+  sudo chmod -R 777 /home/deploy/${instancia_add}/backend/dist/clean.sh
+  sudo chown deploy:deploy /home/deploy/${instancia_add}/backend/dist/clean.sh
+# Agregar una línea al archivo /etc/sudoers
+  echo "deploy ALL=(ALL) NOPASSWD: ALL" | sudo EDITOR='tee -a' visudo
 EOF
 
   sleep 2
