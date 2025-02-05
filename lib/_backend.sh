@@ -8,18 +8,18 @@
 #######################################
 backend_redis_create() {
   print_banner
-  printf "${WHITE} 💻 Creando docker con phpmyadmin y DB...${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Creando base de datos y usuario DB...${GRAY_LIGHT}"
   printf "\n\n"
 
-  sleep 2
-
-  sudo su - root <<EOF
-  usermod -aG docker deploy
-  docker run --name mysql-${instancia_add} -e MYSQL_ROOT_PASSWORD=${mysql_root_password} -e MYSQL_DATABASE=${instancia_add} -e MYSQL_USER=${instancia_add} -e MYSQL_PASSWORD=${mysql_root_password} --restart always -p ${mysql_port}:3306 -d mariadb:latest --character-set-server=utf8mb4 --collation-server=utf8mb4_bin
-  docker run --name phpmyadmin-${instancia_add} -d --link mysql-${instancia_add}:db -p ${phpmyadmin_port}:80 phpmyadmin/phpmyadmin
+  MYSQL_PASSWORD=$(openssl rand -base64 12)
+sudo mysql -u root <<EOF
+CREATE DATABASE $instancia_add CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+CREATE USER '$instancia_add'@'localhost' IDENTIFIED BY '$MYSQL_PASSWORD';
+GRANT ALL PRIVILEGES ON $instancia_add.* TO '$instancia_add'@'localhost';
+FLUSH PRIVILEGES;
 EOF
+echo -e "Base de datos creada"
 sleep 2
-
 }
 
 #######################################

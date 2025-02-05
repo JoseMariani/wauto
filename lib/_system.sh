@@ -88,32 +88,6 @@ EOF
 
   sleep 2
 }
-#######################################
-# installs docker
-# Arguments:
-#   None
-#######################################
-system_docker_install() {
-  print_banner
-  printf "${WHITE} 💻 Instalando docker y paquetes para SSL...${GRAY_LIGHT}"
-  printf "\n\n"
-
-  sleep 2
-
-  sudo su - root <<EOF
-  apt install -y apt-transport-https \
-                 ca-certificates curl \
-                 software-properties-common
-
-  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
-  
-  add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
-
-  apt install -y docker-ce
-EOF
-
-  sleep 2
-}
 
 #######################################
 # Ask for file location containing

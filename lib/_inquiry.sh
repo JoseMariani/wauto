@@ -1,13 +1,5 @@
 #!/bin/bash
 
-get_mysql_root_password() {
-  
-  print_banner
-  printf "${WHITE} 💻 Insira senha padrão para o sistema (senha root mysql):${GRAY_LIGHT}"
-  printf "\n\n"
-  read -p "> " mysql_root_password
-}
-
 get_link_git() {
   
   print_banner
@@ -19,7 +11,7 @@ get_link_git() {
 get_instancia_add() {
   
   print_banner
-  printf "${WHITE} 💻 Digite o nome da empresa a ser configurada (Utilizar Letras minusculas):${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Empresa a ser configurada (Utilizar Letras minusculas):${GRAY_LIGHT}"
   printf "\n\n"
   read -p "> " instancia_add
 }
