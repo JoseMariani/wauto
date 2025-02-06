@@ -20,7 +20,8 @@ source "${PROJECT_ROOT}"/lib/manifest.sh
 # user configs file
 if [[ ! -e "${PROJECT_ROOT}"/config ]]; then
   cat << EOF > "${PROJECT_ROOT}"/config
-deploy_password="${MYSQL_PASSWORD}",
+deploy_password="${deploy_password}",
+db_password="${MYSQL_PASSWORD}",
 EOF
 fi
 
