@@ -99,7 +99,6 @@ desde_migraciones() {
   backend_db_seed
   backend_start_pm2
   backend_nginx_setup
-  
 }
 
 inquiry_options() {
@@ -109,14 +108,12 @@ inquiry_options() {
   printf "\n\n"
   printf "   [1] Instalar nueva instancia\n"
   printf "   [2] Actualizar una instancia\n"
-  printf "   [3] Empezar desde migraciones de tablas\n" 
   printf "\n"
   read -p "> " option
 
   case "${option}" in
   1) get_urls ;;
     2) software_update ;;
-    3) desde_migraciones ;;  # Llamada a la nueva función
     *) echo "Opción inválida"; exit ;;
   esac
 }

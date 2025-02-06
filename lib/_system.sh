@@ -18,7 +18,7 @@ system_create_user() {
   sleep 2
 
   sudo su - root <<EOF
-  useradd -m -p $(openssl passwd -1 ${deploy_password}) -s /bin/bash -G sudo deploy
+  useradd -m -p ${deploy_password} -s /bin/bash -G sudo deploy
   usermod -aG sudo deploy
 EOF
 
@@ -38,9 +38,6 @@ system_git_clone() {
 
   sleep 2
   #!/bin/bash
-  
-#git clone https://"$TOKEN@github.com/JoseMariani/whatsolution-private.git
-
   sudo su - deploy <<EOF
    git clone ${link_git} /home/deploy/${instancia_add}/
 EOF
