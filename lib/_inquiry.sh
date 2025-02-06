@@ -81,6 +81,7 @@ get_urls() {
   get_frontend_port
   get_backend_port
   get_mysql_port
+  get_link_git
 }
 
 software_update() {
