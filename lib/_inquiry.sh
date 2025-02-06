@@ -64,21 +64,12 @@ get_frontend_port() {
   read -p "> " frontend_port
 }
 
-
 get_backend_port() {
   
   print_banner
   printf "${WHITE} 💻 Escribe el PUERTO BACKEND para esta instancia; Ex: 4000 A 4999 ${GRAY_LIGHT}"
   printf "\n\n"
   read -p "> " backend_port
-}
-
-get_phpmyadmin_port() {
-  
-  print_banner
-  printf "${WHITE} 💻 Escriba el PUERTO de PHPMYADMIN  de ${instancia_add}; EJEMPLO: 8081 ${GRAY_LIGHT}"
-  printf "\n\n"
-  read -p "> " phpmyadmin_port
 }
 
 get_mysql_port() {
@@ -97,8 +88,8 @@ get_urls() {
   get_backend_url
   get_frontend_port
   get_backend_port
-  get_phpmyadmin_port
   get_mysql_port
+  get_deploy_password
 }
 
 software_update() {
@@ -119,8 +110,7 @@ inquiry_options() {
 
   case "${option}" in
     1) get_urls ;;
-    2) 
-      software_update 
+    2) software_update 
       exit
       ;;
 

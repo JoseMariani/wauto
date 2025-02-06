@@ -65,7 +65,6 @@ PM2_BACKEND=${instancia_add}-backend
 JWT_SECRET=${jwt_secret}
 JWT_REFRESH_SECRET=${jwt_refresh_secret}
 
-PMA_PORT=${phpmyadmin_port}
 REDE=${instancia_add}
 
 USER_LIMIT=${max_user}
