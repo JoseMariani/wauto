@@ -108,7 +108,7 @@ inquiry_options() {
   printf "${WHITE} 💻 Bienvenido que quieres hacer?!${GRAY_LIGHT}"
   printf "\n\n"
   printf "   [1] Instalar nueva instancia\n"
-  printf "   [2] Actualizar una instancia"
+  printf "   [2] Actualizar una instancia\n"
   printf "   [3] Empezar desde migraciones de tablas\n" 
   printf "\n"
   read -p "> " option
@@ -116,7 +116,7 @@ inquiry_options() {
   case "${option}" in
   1) get_urls ;;
     2) software_update ;;
-    3) nueva_funcion ;;  # Llamada a la nueva función
+    3) desde_migraciones ;;  # Llamada a la nueva función
     *) echo "Opción inválida"; exit ;;
   esac
 }
