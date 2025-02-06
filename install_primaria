@@ -44,7 +44,6 @@ system_nginx_install
 system_certbot_install
 
 # system config
-get_deploy_password
 system_create_user
 
 # backend related

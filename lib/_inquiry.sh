@@ -1,13 +1,5 @@
 #!/bin/bash
 
-get_deploy_password() {
-  
-  print_banner
-  printf "${WHITE} 💻 Contraseña del usuario deploy${GRAY_LIGHT}"
-  printf "\n\n"
-  read -p "> " deploy_password
-}
-
 get_link_git() {
   
   print_banner
@@ -89,7 +81,6 @@ get_urls() {
   get_frontend_port
   get_backend_port
   get_mysql_port
-  get_deploy_password
 }
 
 software_update() {

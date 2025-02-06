@@ -11,6 +11,9 @@ system_create_user() {
   print_banner
   printf "${WHITE} 💻 Creamos un usuario para esta instancia...${GRAY_LIGHT}"
   printf "\n\n"
+  printf "${WHITE} 💻 Contraseña del usuario deploy${GRAY_LIGHT}"
+  printf "\n\n"
+  read -p "> " deploy_password
 
   sleep 2
 
