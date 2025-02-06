@@ -84,6 +84,24 @@ get_urls() {
   get_link_git
 }
 
+variables_continuar() {
+  get_instancia_add
+  get_frontend_port
+  get_backend_port
+  get_frontend_url
+  get_backend_url
+  get_mysql_port
+}
+
+frontend(){
+variables_continuar
+frontend_set_env
+frontend_node_dependencies
+frontend_node_build
+frontend_start_pm2
+frontend_nginx_setup
+}
+
 software_update() {
   get_instancia_add
   frontend_update
@@ -96,13 +114,25 @@ inquiry_options() {
   printf "${WHITE} 💻 Bienvenido que quieres hacer?!${GRAY_LIGHT}"
   printf "\n\n"
   printf "   [1] Instalar nueva instancia\n"
-  printf "   [2] Actualizar una instancia"
+  printf "   [2] Actualizar una instancia\n"
+    printf "   [3] Backend Importar tablas nuevas\n"
+      printf "   [4] Backend importar datos de tablas\n"
+        printf "   [5] Backend Iniciar PM2 del backend\n"
+          printf "   [6] Backend Nginx Septup Backend\n"
+           printf "   [7] Iniciar instalacion Frontend\n"
+            printf "   [8] Iniciar instalacion Backend\n"
+              printf "   [9] Restablecer Establecer variables\n"
   printf "\n"
   read -p "> " option
 
   case "${option}" in
     1) get_urls ;;
-    2) software_update 
+    2) software_update ;;
+    3) backend_db_migrate ;;
+    4) backend_db_seed  ;;
+    5) backend_start_pm2 ;;
+    6) backend_nginx_setup ;; 
+    7) variables_continuar ;;
       exit
       ;;
 
