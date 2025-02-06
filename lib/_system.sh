@@ -150,7 +150,8 @@ system_puppeteer_dependencies() {
                       libappindicator1 \
                       libnss3 \
                       lsb-release \
-                      xdg-utils
+                      xdg-utils \
+                      pwgen
 EOF
   sleep 2
 }

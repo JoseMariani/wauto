@@ -135,11 +135,6 @@ backend_node_build() {
   cd /home/deploy/${instancia_add}/backend
   npm install
   npm run build
-  sudo cp /home/deploy/${instancia_add}/backend/clean.sh /home/deploy/${instancia_add}/backend/dist/clean.sh
-  sudo chmod -R 777 /home/deploy/${instancia_add}/backend/dist/clean.sh
-  sudo chown deploy:deploy /home/deploy/${instancia_add}/backend/dist/clean.sh
-# Agregar una línea al archivo /etc/sudoers
-  echo "deploy ALL=(ALL) NOPASSWD: ALL" | sudo EDITOR='tee -a' visudo
 EOF
 
   sleep 2
